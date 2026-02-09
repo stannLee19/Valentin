@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¿Quieres ser mi San Valentín?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      max-width: 400px;
+    }
+
+    h1 {
+      color: #e63946;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    .yes {
+      background-color: #e63946;
+      color: white;
+    }
+
+    .no {
+      background-color: #ccc;
+    }
+    .icono img {
+  width: 140px;          /* tamaño controlado */
+  height: auto;
+  display: block;
+  margin: 0 auto 15px;  /* centrado y espacio abajo */
+}
+
+    h1 {
+  color: #e63946;
+  margin-top: 5px;
+  font-size: 22px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+ .icono img {
+  animation: latido 1.5s infinite;
+}
+
+@keyframes latido {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+
+}
+  </style>
+</head>
+<body>
+  <div class="card">
+    
+<div class="card">
+
+<div class="icono">
+  <img src="Img/oso-de-peluche.png" alt="Osito con corazón">
+</div>
+
+  <!-- NOMBRE -->
+  <h1>💖 Hola mi Adri 💖</h1>
+
+  <!-- TEXTO -->
+  <p>
+    Desde que estás en mi vida, todo es más bonito.<br>
+    Así que hoy quiero preguntarte algo muy especial…
+  </p>
+
+  <h2>¿Quieres ser mi San Valentín? 🌹</h2>
+
+  <button id="btnSi" class="yes" onclick="acepta()">Sí 💕</button>
+  <button class="no" onclick="rechaza()">No 😢</button>
+
+</div>
+
+
+ <script>
+  let escala = 1;
+
+  function acepta() {
+    alert("😍💘 Sabía que dirías que sí. 💘😍");
+  }
+
+ function rechaza() {
+    alert("😢 ¿Segura? Piénsalo bien… 💔");
+
+    escala += 0.2; // cuánto crece el botón "Sí"
+    const btnSi = document.getElementById("btnSi");
+    btnSi.style.transform = `scale(${escala})`;
+  }
+</script>
+</body>
+</html>
